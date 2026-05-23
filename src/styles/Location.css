@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* LOCATION CONTAINER */
+.location {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-right: 15px; 
+  margin-bottom: 8px; /* Adjusted since the navbar is smaller */
+  color: black;
+  font-size: 11px; /* Smaller to fit */
+  position: relative;
+}
+
+/* Dropdown */
+.location-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  width: 200px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  color: black;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  border-radius: 3px;
+}
+
+.location-loading {
+  padding: 8px;
+}
+
+.location-item {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.location-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* "Deliver to" text */
+.selected {
+  opacity: 0.7;
+  color: white;
+  margin-top: 2px;
+}
+
+/* INPUT */
+#input-fld {
+  height: 24px;
+  width: 180px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 2px;
+  padding-left: 5px;
+}
+
+/* FOCUS */
+#input-fld:focus {
+  outline: 2px solid #ff9900;
+}
+
+/* EXTRA TEXT */
+#loadpara {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+/* ========================= */
+/* 📱 TABLET & MOBILE */
+/* ========================= */
+@media (max-width: 768px) {
+  .location {
+    margin-left: 10px;
+    font-size: 11px;
+  }
+
+  #input-fld {
+    width: 150px; /* shrink input */
+    height: 26px;
+    font-size: 12px;
+  }
+
+  #loadpara {
+    font-size: 13px;
+  }
+}
+
+/* ========================= */
+/* 📱 SMALL MOBILE */
+/* ========================= */
+@media (max-width: 480px) {
+  .location {
+    margin-left: 5px;
+    font-size: 10px;
+  }
+
+  #input-fld {
+    width: 120px; /* more compact */
+    height: 24px;
+    font-size: 11px;
+    padding-left: 4px;
+  }
+
+  #loadpara {
+    font-size: 12px;
+  }
+
+  .selected {
+    margin-top: 2px;
+  }
+}

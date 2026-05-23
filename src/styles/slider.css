@@ -1,0 +1,54 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #E3E6E6; /* match Home.jsx background */
+}
+
+.slider-images {
+  display: flex;
+  width: 100%;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  object-fit: cover;
+  /* Adjust the mask image for simple bottom fade if you want an amazon like feel, but kept simple */
+}
+
+.slide.active {
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 30%; /* slightly above center like Amazon */
+  background-color: transparent;
+  color: #333;
+  border: none;
+  font-size: 40px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-btn:hover {
+  outline: 2px solid #008296; /* Amazon focus style */
+}
+
+.left-btn {
+  left: 20px;
+}
+
+.right-btn {
+  right: 20px;
+}
+
+/* 📱 TABLET & MOBILE */
+@media (max-width: 768px) {
+  .slider-btn {
+    font-size: 30px;
+    padding: 5px;
+  }
+}

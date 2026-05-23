@@ -1,0 +1,33 @@
+.subnav-container {
+  display: flex;
+  background-color: #232f3e;
+  color: white;
+  padding: 5px 20px;
+  align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Hide scrollbar for cleaner look */
+.subnav-container::-webkit-scrollbar {
+  display: none;
+}
+.subnav-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.subnav-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin: 0 5px;
+  border-radius: 3px;
+}
+
+.subnav-btn:hover {
+  border: 1px solid white;
+}

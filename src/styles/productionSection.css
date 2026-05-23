@@ -1,0 +1,51 @@
+.section {
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+  z-index: 20;
+}
+
+.section h2 {
+  font-size: 21px;
+  margin-bottom: 15px;
+  color: #0f1111;
+}
+
+/* This controls 2x2 layout (4 items total) */
+.items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  gap: 15px;
+}
+
+/* Each card */
+.card {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Image styling */
+.card img {
+  width: 100%;
+  height: 120px; /* fixed height for consistency */
+  object-fit: cover; /* prevents stretching */
+  background-color: #f0f0f0; /* placeholder bg */
+  border-radius: 4px;
+}
+
+/* Title below image */
+.card p {
+  font-size: 12px;
+  margin-top: 8px;
+  color: #0f1111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
