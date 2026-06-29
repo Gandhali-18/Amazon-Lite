@@ -1,51 +1,65 @@
 .section {
-  background: white;
+  background: #fff;
   padding: 20px;
-  border-radius: 4px;
-  z-index: 20;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .section h2 {
-  font-size: 21px;
-  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 700;
   color: #0f1111;
+  margin-bottom: 20px;
 }
 
-/* This controls 2x2 layout (4 items total) */
 .items {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 per row */
-  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 
-/* Each card */
 .card {
-  text-decoration: none;
-  color: black;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s;
+  text-decoration: none;
+  color: #111;
+  transition: transform 0.25s ease;
 }
 
 .card:hover {
-  transform: scale(1.03);
+  transform: translateY(-4px);
 }
 
-/* Image styling */
 .card img {
   width: 100%;
-  height: 120px; /* fixed height for consistency */
-  object-fit: cover; /* prevents stretching */
-  background-color: #f0f0f0; /* placeholder bg */
-  border-radius: 4px;
+  height: 180px;
+  object-fit: contain;
+  background: #f7f7f7;
+  border-radius: 6px;
+  padding: 10px;
 }
 
-/* Title below image */
-.card p {
-  font-size: 12px;
-  margin-top: 8px;
+.card p:first-of-type {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
   color: #0f1111;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.4;
+}
+
+.price {
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #B12704;
+}
+
+@media (max-width: 768px) {
+  .items {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 200px;
+  }
 }

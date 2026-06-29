@@ -6,11 +6,19 @@ export default function ProductSection({ title, items = [] }) {
       <h2>{title}</h2>
 
       <div className="items">
-        {items.map((item, index) => (
-          <a href={item.link} key={index} className="card">
-            <img src={item.img} alt={item.title}   loading="lazy" />
-            <p>{item.title}</p>
-          </a>
+        {items.map((item) => (
+          <div key={item.id} className="card">
+            <img
+              src={item.thumbnail}
+              alt={item.title}
+              loading="lazy"
+            />
+
+            <p className="price
+            ">{item.title}</p>
+
+            <p>${item.price}</p>
+          </div>
         ))}
       </div>
     </section>

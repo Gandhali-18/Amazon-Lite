@@ -4,6 +4,8 @@ import Home from "./pages/Home"
 import Login from './pages/Login'
 import ProtectedRoute from "./components/ProtectedRoute"
 import { AuthProvider } from './context/AuthContext'
+import {fetchProducts} from "./services/productService"
+import Product from "./components/Product"
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
         element: <Home />
       }
     ]
+  } ,
+  {
+    path:'/products',
+    element:<Product />
   }
 ])
 

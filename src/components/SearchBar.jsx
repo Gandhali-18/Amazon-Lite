@@ -2,7 +2,8 @@ import { useState } from "react";
 import "../styles/searchbar.css";
 
 export default function SearchBar() {
-  const [, setItem] = useState("");
+  const [item, setItem] = useState("");
+  const [search , setSearch] = useState("");
   const listItem = [
     {id:1 , opt: "All"},
     {id:2 , opt: "All Categories"},
@@ -31,7 +32,8 @@ export default function SearchBar() {
             </option>
           ))}
         </select>
-        <input type="text" placeholder="Search Amazon.in" />
+        <input type="text" placeholder="Search Amazon.in" value={search}
+        onChange={(e)=>setSearch(e.target.value)}/>
       </div>
     </div>
   );
